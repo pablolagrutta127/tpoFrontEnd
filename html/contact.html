@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/0243fdfda9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="contact.js"></script> 
+   
+</head>
+<body>
+    <h1> Formulario de contacto </h1>
+    <section>
+        <i class="fa-solid fa-bolt"></i>
+        <i class="fa-solid fa-bolt"></i>
+        <i class="fa-solid fa-bolt"></i>
+        <i class="fa-solid fa-bolt"></i>
+        <i class="fa-solid fa-bolt"></i>
+        <i class="fa-solid fa-bolt"></i>
+        </section>
+    <nav>
+        <a href="/html/index.html" >Index</a>
+        <a href="/html/contact.html" >Contacto</a>
+        <a href="/html/projects.html" >Proyectos</a>
+        <a href="/html/market.html" >Carrito</a>
+        </nav>
+
+        <section>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt"></i>
+            </section>
+
+    
+    <div class="form" style="font-style: italic; width: 400px; margin: auto" >
+    <form name="fvalida" margin="auto">
+        <table margin="auto">
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="nombre" size="30" maxlength="100" required></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="mail" name="mail" size="30" maxlength="100" required></td>
+            </tr>
+            <tr>
+                <td>Motivo de consulta:</td>
+                <td>
+                    <select name="interes">
+                        <option value="Elegir">Elegir
+                        </option>
+                        <option value="Comercial">Contacto comercial </option>
+                        <option value="Clientes">Atención al cliente </option>
+                        <option value="Proveedores">Contacto de proveedores </option>
+                        <option value="Proveedores">Sugerencias/Otros </option>
+                        <option value="Empleo">Trabajar aqui </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comentario: </td>
+                <td><textarea id="comentario" name="comentario" rows="5" cols="33">Dejanos tu consulta</textarea>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" allign="center"><input type="button" value="Enviar" onclick="valida_envia()"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+
+    <script>
+        //Validación de un formulario con Javascript
+        //Fuente: https://desarrolloweb.com/articulos/1767.php
+        function valida_envia() {
+            //valido el nombre
+            if (document.fvalida.nombre.value.length == 0) {
+                alert("Tiene que escribir su nombre")
+                document.fvalida.nombre.focus()
+                return 0;
+            }
+            
+            //valido email
+            mail = document.fvalida.mail
+            console.log(mail.value)
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(mail.value.match(mailformat))
+            {
+            alert("Direccion de email valida!!");
+            document.fvalida.mail.focus();
+            return true;
+            }
+            else
+            {
+            alert("Dirección de email incorrecta. Revisar sintaxis!");
+            document.fvalida.mail.focus();
+            return false;
+            }
+
+            //valido el interés
+            if (document.fvalida.interes.selectedIndex == 0) {
+                alert("Debe seleccionar un motivo de su contacto.")
+                document.fvalida.interes.focus()
+                return 0;
+            }
+
+
+            //el formulario se envia
+            alert("Muchas gracias por enviar el formulario");
+            document.fvalida.submit();
+        }
+
+        function validarEntero(valor) {
+            //intento convertir a entero.
+            //si era un entero no le afecta, si no lo era lo intenta convertir
+            valor = parseInt(valor)
+
+            //Compruebo si es un valor numérico
+            if (isNaN(valor)) {
+                //entonces (no es numero) devuelvo el valor cadena vacia
+                return ""
+            } else {
+                //En caso contrario (Si era un número) devuelvo el valor
+                return valor
+            }
+        }
+    </script>
+</body>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.6209085988905!2d-58.47377503984234!3d-34.67384589733086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9500b1f72e1%3A0x9da469312afe3b52!2sLarraya%203870%2C%20Buenos%20Aires!5e0!3m2!1sit!2sar!4v1653517940591!5m2!1sit!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<footer>
+    <p>Desarrollado por Pablo La Grutta. Contacto: pablo.lg@hotmail.com.ar</p>
+</footer>
+</html>
+

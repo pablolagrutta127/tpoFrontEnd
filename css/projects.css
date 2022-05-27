@@ -1,0 +1,62 @@
+.flex-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+
+  
+}
+.flex-item1,.flex-item2,.flex-item3{
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    
+
+}
+.item-2{
+    flex-grow:2;/* flex-grow factor de crecimiento (solo numeros positivos), 
+    ocupa el espacio restante.Si cada caja tiene 44.44*3 es igual a 133.32
+    del ancho de 400px sobra 266.68 que es lo que ocupa ahora el item-2*/
+}
+
+
+a,h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+
+
+img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+
+  header,footer{   
+
+    background-color:rgb(192, 196, 207);
+    margin-top:auto; 
+}
+footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+
+  }
+
+body{
+    height: 100%;
+    width: 100%;
+    text-align: center ;
+    background-color: #8eb499;
+    color: #12214f;
+
+}

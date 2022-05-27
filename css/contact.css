@@ -1,0 +1,47 @@
+.examplethree {
+    background-color: #777799;
+    color: #777799;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center ;
+    background-color: #8eb499;
+    color: #12214f;
+
+}
+
+
+div,div.form,div.form.table { 
+    margin: auto ; 
+    padding: 0;
+    }
+
+
+
+header,footer{   
+
+        background-color:rgb(192, 196, 207);
+        margin-top:auto; 
+    }
+footer {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+    
+      }
+a,h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+p{
+    font-weight: bold;;
+}

@@ -1,0 +1,108 @@
+.examplethree {
+    background-color: #777799;
+    color: #777799;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center ;
+    background-color: #8eb499;
+    color: #12214f;
+
+
+}
+
+header,footer{   
+
+    background-color:rgb(192, 196, 207);
+    margin-top:auto; 
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+
+  }
+
+a,h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: left
+}
+p{
+    font-weight: bold;;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    color:beige;
+
+}
+div{
+    font-weight: bold;;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    align-content: center;
+    margin: auto;
+    
+
+}
+
+.flex-container {
+    display: flex;
+    align-self: center;
+    background-color:rgb(29, 103, 29);
+    width:300px;
+  }
+  
+  .flex-container > div {
+    background-color:azure;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item-1,.flex-item-2,.flex-item-3,.flex-item-4,.flex-item-5 {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+
+  
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-item-1, .flex-item-2 {
+      flex: 30%;
+    }
+  
+    
+  }
+  @media (max-width: 480px) {
+    .flex-item-1, .flex-item-2 {
+      flex: 30%;
+    }
+      .flex-item-3,.flex-item-4{
+    flex:30%}
+  }
